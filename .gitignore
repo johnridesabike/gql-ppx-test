@@ -67,3 +67,10 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+.merlin
+.graphql_ppx_cache/
+_esy/
+esy.lock/
+lib/
+.bsb.lock

@@ -1,0 +1,48 @@
+{
+  "name": "gatsby-starter-default",
+  "reason": {
+    "react-jsx": 3
+  },
+  "bsc-flags": [
+    "-bs-super-errors",
+  ],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": ".",
+      "subdirs": false
+    }
+  ],
+  "package-specs": [
+    {
+      "module": "es6",
+      "in-source": true
+    },
+    {
+      "module": "commonjs",
+      "in-source": false
+    }
+  ],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dependencies": [
+    "reason-react",
+    "@baransu/graphql_ppx_re"
+  ],
+  "ppx-flags": [
+    [
+      "@baransu/graphql_ppx_re/ppx",
+      "-template-tag-import=graphql",
+      "-template-tag-location=gatsby"
+    ]
+  ],
+  "refmt": 3,
+  "warnings": {
+    "number": "+A-48-9-40-42",
+    "error": "+A-3-44-102"
+  }
+}
+

@@ -30,7 +30,7 @@
   "namespace": true,
   "bs-dependencies": [
     "reason-react",
-    "@reasonml-community/graphql-ppx/ppx"
+    "@reasonml-community/graphql-ppx"
   ],
   "ppx-flags": [
     [

@@ -4,7 +4,7 @@
     "react-jsx": 3
   },
   "bsc-flags": [
-    "-bs-super-errors",
+    "-bs-super-errors"
   ],
   "sources": [
     {
@@ -30,19 +30,18 @@
   "namespace": true,
   "bs-dependencies": [
     "reason-react",
-    "@baransu/graphql_ppx_re"
+    "@reasonml-community/graphql-ppx/ppx"
   ],
   "ppx-flags": [
     [
-      "@baransu/graphql_ppx_re/ppx",
-      "-template-tag-import=graphql",
-      "-template-tag-location=gatsby"
+      "@reasonml-community/graphql-ppx/ppx",
+      "-template-tag=graphql"
     ]
   ],
   "refmt": 3,
   "warnings": {
     "number": "+A-48-9-40-42",
-    "error": "+A-3-44-102"
+    "error": "+A-3-44-102-20"
   }
 }
 

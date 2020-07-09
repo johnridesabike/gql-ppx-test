@@ -1,13 +1,16 @@
+module ImageFluidA = Query_Frag_A.ImageFluidA;
+module ImageFluidB = Query_Frag_B;
+
 [%graphql
   {|
 query {
   placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
     childImageSharp {
       a: fluid(maxWidth: 300) {
-        ...Query_Frag_A.ImageFluidA
+        ...ImageFluidA
       }
       b: fluid(maxWidth: 300) {
-        ...Query_Frag_B
+        ...ImageFluidB
       }
     }
   }

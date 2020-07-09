@@ -3,25 +3,24 @@
 import * as Query_Frag_A$GatsbyStarterDefault from "./Query_Frag_A.bs.js";
 import * as Query_Frag_B$GatsbyStarterDefault from "./Query_Frag_B.bs.js";
 
-var Raw = { };
+var Raw = {};
 
-let { graphql } = require("gatsby")
-;
-
-var query = (graphql`
+var query = ((frag_0, frag_1) => graphql`
   query   {
-  placeholderImage: file(relativePath: {eq: "gatsby-astronaut.png"})  {
-    childImageSharp  {
-      a: fluid(maxWidth: 300)  {
-        ...ImageFluidA
-      }
-      b: fluid(maxWidth: 300)  {
-        ...Query_Frag_B
+    placeholderImage: file(relativePath: {eq: "gatsby-astronaut.png"})  {
+      childImageSharp  {
+        a: fluid(maxWidth: 300)  {
+          ...ImageFluidA
+        }
+        b: fluid(maxWidth: 300)  {
+          ...ImageFluidB
+        }
       }
     }
   }
-}
-`);
+  ${frag_0}
+  ${frag_1}
+`)(Query_Frag_A$GatsbyStarterDefault.ImageFluidA.query, Query_Frag_B$GatsbyStarterDefault.query);
 
 function parse(value) {
   var value$1 = value.placeholderImage;
@@ -37,8 +36,8 @@ function parse(value) {
       var value$3 = value$2.a;
       var value$4 = value$2.b;
       tmp$1 = {
-        a: !(value$3 == null) ? Query_Frag_A$GatsbyStarterDefault.ImageFluidA.verifyArgsAndParse(value$3) : undefined,
-        b: !(value$4 == null) ? Query_Frag_B$GatsbyStarterDefault.verifyArgsAndParse(value$4) : undefined
+        a: !(value$3 == null) ? Query_Frag_A$GatsbyStarterDefault.ImageFluidA.verifyArgsAndParse(/* ImageFluidA */-238677870, value$3) : undefined,
+        b: !(value$4 == null) ? Query_Frag_B$GatsbyStarterDefault.verifyArgsAndParse(/* ImageFluidB */-238677869, value$4) : undefined
       };
     }
     tmp = {
@@ -79,6 +78,10 @@ function serialize(value) {
         };
 }
 
+function serializeVariables(param) {
+  
+}
+
 function makeVariables(param) {
   
 }
@@ -91,14 +94,21 @@ var Z__INTERNAL = {
   graphql_module: 0
 };
 
+var ImageFluidA;
+
+var ImageFluidB;
+
 export {
+  ImageFluidA ,
+  ImageFluidB ,
   Raw ,
   query ,
   parse ,
   serialize ,
+  serializeVariables ,
   makeVariables ,
   makeDefaultVariables ,
   Z__INTERNAL ,
   
 }
-/*  Not a pure module */
+/* query Not a pure module */

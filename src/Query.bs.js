@@ -5,7 +5,7 @@ import * as Query_Frag_B$GatsbyStarterDefault from "./Query_Frag_B.bs.js";
 
 var Raw = {};
 
-var query = ((frag_0, frag_1) => graphql`
+var query = (graphql`
   query   {
     placeholderImage: file(relativePath: {eq: "gatsby-astronaut.png"})  {
       childImageSharp  {
@@ -18,9 +18,7 @@ var query = ((frag_0, frag_1) => graphql`
       }
     }
   }
-  ${frag_0}
-  ${frag_1}
-`)(Query_Frag_A$GatsbyStarterDefault.ImageFluidA.query, Query_Frag_B$GatsbyStarterDefault.query);
+`);
 
 function parse(value) {
   var value$1 = value.placeholderImage;
